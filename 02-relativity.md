@@ -7,7 +7,7 @@
 
 On chauffe une tasse de café (masse d'eau $m = 250 \text{ g}$) de $20°\text{C}$ à $80°\text{C}$.
 
-Données : $c_{\text{eau}} = 4.18 \text{ J/(g·°C)}$
+Données : $c_{\text{eau}} = 4.18 \text{ J/(g°C)}$
 
 **(a)** Calculez l'énergie thermique $Q$ fournie à l'eau.
 
@@ -118,60 +118,286 @@ Donc $v/c \approx \sqrt{2 E_k / mc^2} \approx 0.038$ — soit environ $4\%$ de $
 
 </details>
 
-## Exercice 3 — Désintégration interdite ?
+## Exercice 3 — Désintégration du pion neutre
 
-Un pion neutre ($\pi^0$) au repos se désintègre en deux photons :
+Un pion neutre ($\pi^0$) **au repos** se désintègre en deux photons :
 
 $$\pi^0 \;\longrightarrow\; \gamma + \gamma$$
 
 Masse du pion : $m_{\pi} = 135.0 \text{ MeV}/c^2$
 
-**(a)** Par conservation de l'énergie-impulsion, trouvez l'énergie de chaque photon dans le référentiel de repos du pion.
+Rappels : pour un photon, $E = pc$ (masse nulle). La relation énergie-impulsion relativiste est $E^2 = (pc)^2 + (mc^2)^2$.
 
-**(b)** Un étudiant propose la désintégration en un **seul** photon : $\pi^0 \to \gamma$. Montrez que c'est impossible en utilisant la conservation du quadri-impulsion ($p^\mu p_\mu = \text{invariant}$).
+**(a)** En utilisant la conservation de l'impulsion dans le référentiel de repos du pion, que pouvez-vous déduire sur les directions et les énergies des deux photons ?
 
-**(c)** Un pion $\pi^0$ se déplace à $v = 0.80c$ dans le référentiel du labo et se désintègre en deux photons émis le long de l'axe de mouvement (un vers l'avant, un vers l'arrière). Trouvez l'énergie de chacun des deux photons dans le référentiel du labo.
+**(b)** Un étudiant propose plutôt la désintégration en un **seul** photon : $\pi^0 \to \gamma$. Montrez que c'est impossible en écrivant **séparément** la conservation de l'énergie et la conservation de l'impulsion.
+
+**(c)** Supposons maintenant que le pion se déplace à $v = 0.80c$ dans le labo et se désintègre en deux photons émis le long de l'axe de mouvement (un vers l'avant, un vers l'arrière). En utilisant la conservation de l'énergie totale et de l'impulsion totale dans le référentiel du labo, trouvez l'énergie de chacun des deux photons.
 
 <details>
 <summary><strong>Indice stratégique</strong></summary>
-
-En (a), exploitez la symétrie du problème dans le référentiel de repos. En (b), calculez l'invariant $p^\mu p_\mu$ avant et après — pour un photon, cet invariant vaut toujours zéro. En (c), utilisez la transformation de Lorentz sur les composantes de la quadri-impulsion des photons, ou bien travaillez directement avec conservation de $E$ et $p$ dans le labo.
+En (a), la quantité de mouvement totale initiale est nulle — qu'est-ce que ça impose aux photons ? En (b), essayez de satisfaire les deux lois de conservation en même temps : vous allez obtenir une contradiction. En (c), vous avez deux inconnues ($E_1$ et $E_2$) et deux équations (conservation de $E$ et de $p$). Pensez à calculer l'énergie totale et l'impulsion totale du pion dans le labo avant de commencer.
 
 </details>
-
 <details>
 <summary><strong>Solution</strong></summary>
+**(a)** Dans le référentiel de repos du pion, $\vec{p}_{\text{total, initial}} = 0$. Donc :
 
-**(a)** Dans le référentiel de repos du pion, la quantité de mouvement totale est nulle. Les deux photons doivent partir dans des directions opposées avec des impulsions égales en module, donc des énergies égales :
+$$\vec{p}_{\gamma_1} + \vec{p}_{\gamma_2} = 0 \implies |\vec{p}_{\gamma_1}| = |\vec{p}_{\gamma_2}|$$
+
+Les photons partent dans des directions **opposées** avec des impulsions de même module. Puisque $E = pc$ pour un photon, ils ont la même énergie :
 
 $$2E_\gamma = m_\pi c^2 \implies E_\gamma = \frac{135.0}{2} = 67.5 \text{ MeV}$$
 
-**(b)** Invariant avant la désintégration (pion au repos) :
+**(b)** Pion au repos → $\vec{p}_{\text{initial}} = 0$.
 
-$$p^\mu p_\mu = (m_\pi c)^2 > 0$$
+Conservation de l'impulsion pour un seul photon produit :
 
-Invariant après la désintégration (un seul photon) :
+$$\vec{p}_\gamma = 0 \implies p_\gamma = 0$$
 
-$$p^\mu p_\mu = 0 \quad \text{(masse nulle du photon)}$$
+Mais un photon avec $p = 0$ a une énergie $E = pc = 0$. Or la conservation de l'énergie exige :
 
-Or $p^\mu p_\mu$ est un invariant de Lorentz : il doit être le même avant et après. On obtient $(m_\pi c)^2 = 0$, ce qui est une contradiction. **La désintégration en un seul photon est interdite.** Il faut au minimum deux photons pour satisfaire simultanément conservation de l'énergie et de l'impulsion.
+$$E_\gamma = m_\pi c^2 = 135.0 \text{ MeV} \neq 0$$
 
-**(c)** Avec $v = 0.80c$, on a $\gamma = 5/3$ et $\beta = 0.80$.
+**Contradiction.** On ne peut pas satisfaire les deux lois simultanément. La désintégration en un seul photon est interdite — il faut au minimum deux photons.
 
-**Méthode — transformation de Lorentz des quadri-impulsions :**
+**(c)** Avec $v = 0.80c$ : $\gamma = 5/3$, $\beta = 0.80$.
 
-Dans le référentiel de repos, les deux photons ont :
-- Photon avant : $E^* = 67.5 \text{ MeV}$, $p^*c = +67.5 \text{ MeV}$
-- Photon arrière : $E^* = 67.5 \text{ MeV}$, $p^*c = -67.5 \text{ MeV}$
+Énergie et impulsion du pion dans le labo :
 
-Transformation vers le labo ($E = \gamma(E^* + v\,p^*)$) :
+$$E_\pi = \gamma m_\pi c^2 = \frac{5}{3} \times 135.0 = 225.0 \text{ MeV}$$
 
-$$E_{\text{avant}} = \gamma(E^* + \beta\,p^*c) = \frac{5}{3}(67.5 + 0.80 \times 67.5) = \frac{5}{3} \times 121.5 = 202.5 \text{ MeV}$$
+$$p_\pi c = \gamma m_\pi c^2 \times \beta = 225.0 \times 0.80 = 180.0 \text{ MeV}$$
 
-$$E_{\text{arrière}} = \gamma(E^* - \beta\,p^*c) = \frac{5}{3}(67.5 - 0.80 \times 67.5) = \frac{5}{3} \times 13.5 = 22.5 \text{ MeV}$$
+Notons $E_1$ l'énergie du photon vers l'avant et $E_2$ celle du photon vers l'arrière. Pour chaque photon, $p = E/c$, avec un signe $+$ vers l'avant et $-$ vers l'arrière.
 
-**Vérification :** $E_{\text{avant}} + E_{\text{arrière}} = 225 \text{ MeV} = \gamma m_\pi c^2 = \frac{5}{3} \times 135$ ✓
+Conservation de l'énergie :
 
-Le photon émis vers l'avant est boosté à $202.5 \text{ MeV}$, celui vers l'arrière est réduit à $22.5 \text{ MeV}$ — un rapport de 9:1, illustration spectaculaire de l'effet Doppler relativiste.
+$$E_1 + E_2 = 225.0 \text{ MeV} \quad (1)$$
+
+Conservation de l'impulsion (en multipliant par $c$) :
+
+$$E_1 - E_2 = 180.0 \text{ MeV} \quad (2)$$
+
+En additionnant (1) et (2) : $2E_1 = 405.0$, donc $E_1 = 202.5 \text{ MeV}$.
+
+En soustrayant (2) de (1) : $2E_2 = 45.0$, donc $E_2 = 22.5 \text{ MeV}$.
+
+**Vérification :** $E_1 + E_2 = 225.0$ ✓ et $E_1 - E_2 = 180.0$ ✓
+
+Le photon vers l'avant emporte **9 fois** plus d'énergie que celui vers l'arrière — un effet dramatique du mouvement relativiste du pion.
+
+</details>
+
+
+## Exercice 4 — Gymnastique algébrique : énergie-impulsion (sans valeurs numériques)
+
+> Tout est symbolique. L'objectif est de maîtriser les manipulations de la relation
+> $E^2 = (pc)^2 + (mc^2)^2$ et de la conservation énergie-impulsion dans les désintégrations.
+
+
+### Partie A — Identités utiles de la relation énergie-impulsion
+
+La relation fondamentale pour une particule de masse $m$ est :
+
+$$E^2 = (pc)^2 + (mc^2)^2$$
+
+On rappelle aussi que $p = \gamma m v$ et $E = \gamma mc^2$.
+
+**(a)** Montrez que pour toute particule massive :
+
+$$\frac{v}{c} = \frac{pc}{E}$$
+
+**(b)** Montrez que $\gamma = \dfrac{E}{mc^2}$. En déduire que l'énergie cinétique est :
+
+$$E_k = (\gamma - 1)\,mc^2$$
+
+<details>
+<summary><strong>Solution partie A</strong></summary>
+
+**(a)**
+
+$$\frac{p}{E} = \frac{\gamma m v}{\gamma mc^2} = \frac{v}{c^2} \implies \frac{pc}{E} = \frac{v}{c}$$
+
+> **Piège courant :** Les étudiants tentent de dériver cette relation à partir de $E^2 = (pc)^2 + (mc^2)^2$ en isolant $p$, ce qui donne $p = \frac{1}{c}\sqrt{E^2 - (mc^2)^2}$ — correct mais inutilement compliqué. La relation $v/c = pc/E$ est **directe** et doit être connue par cœur.
+
+**(b)** De $E = \gamma mc^2$ :
+
+$$\gamma = \frac{E}{mc^2}$$
+
+L'énergie totale est la somme de l'énergie de masse et de l'énergie cinétique :
+
+$$E = mc^2 + E_k \implies E_k = E - mc^2 = \gamma mc^2 - mc^2 = (\gamma - 1)\,mc^2$$
+
+</details>
+
+### Partie B — Limite non relativiste de $E_k$
+
+**(c)** En utilisant le développement de Taylor $(1 - x)^{-1/2} \approx 1 + \frac{1}{2}x + \frac{3}{8}x^2 + \cdots$ avec $x = \beta^2$, développez $\gamma$ au deuxième ordre en $\beta$ et montrez que :
+
+$$E_k \approx \frac{1}{2}mv^2 + \frac{3}{8}m\frac{v^4}{c^2} + \cdots$$
+
+Identifiez le premier terme. Que représente le second ?
+
+<details>
+<summary><strong>Solution partie B</strong></summary>
+
+$$\gamma = (1 - \beta^2)^{-1/2} \approx 1 + \frac{1}{2}\beta^2 + \frac{3}{8}\beta^4 + \cdots$$
+
+$$E_k = (\gamma - 1)mc^2 \approx \left(\frac{1}{2}\beta^2 + \frac{3}{8}\beta^4\right)mc^2 = \frac{1}{2}m v^2 + \frac{3}{8}m\frac{v^4}{c^2} + \cdots$$
+
+Le premier terme est l'**énergie cinétique classique** $\frac{1}{2}mv^2$.
+
+Le second terme, $\frac{3}{8}\frac{mv^4}{c^2}$, est la **correction relativiste au premier ordre** — elle est négligeable tant que $v \ll c$, mais elle montre précisément à quel point l'approximation classique dévie.
+
+> **Piège courant :** Les étudiants oublient que le développement de $(1-x)^{-1/2}$ donne $+\frac{1}{2}x$, pas $-\frac{1}{2}x$. L'exposant est $-1/2$, pas $+1/2$ ! C'est une erreur de signe extrêmement fréquente qui donne $E_k \approx -\frac{1}{2}mv^2$, un résultat absurde qu'ils ne remettent pas toujours en question.
+
+</details>
+
+### Partie C — Impulsion en fonction de l'énergie cinétique
+
+**(d)** Soit une particule de masse $m$ et d'énergie cinétique $E_k$. En utilisant $E = E_k + mc^2$ et la relation énergie-impulsion, montrez que :
+
+$$p = \frac{1}{c}\sqrt{E_k^2 + 2E_k\,mc^2}$$
+
+puis factorisez sous la forme :
+
+$$p = \frac{1}{c}\sqrt{E_k(E_k + 2mc^2)}$$
+
+**(e)** Vérifiez les deux cas limites :
+
+- **Non relativiste** ($E_k \ll mc^2$) : retrouvez $p \approx \sqrt{2mE_k}$
+- **Ultra-relativiste** ($E_k \gg mc^2$) : retrouvez $p \approx E_k/c$
+
+<details>
+<summary><strong>Solution partie C</strong></summary>
+
+**(d)**
+
+$$E^2 = (pc)^2 + (mc^2)^2$$
+
+$$(E_k + mc^2)^2 = (pc)^2 + (mc^2)^2$$
+
+$$E_k^2 + 2E_k\,mc^2 + \cancel{(mc^2)^2} = (pc)^2 + \cancel{(mc^2)^2}$$
+
+$$(pc)^2 = E_k^2 + 2E_k\,mc^2 = E_k(E_k + 2mc^2)$$
+
+$$\boxed{p = \frac{1}{c}\sqrt{E_k(E_k + 2mc^2)}}$$
+
+> **Piège courant :** L'erreur la plus fréquente est d'oublier le terme $2E_k\,mc^2$ lors du développement du carré $(E_k + mc^2)^2$. L'étudiant écrit $E_k^2 + (mc^2)^2$ au lieu de $E_k^2 + 2E_k\,mc^2 + (mc^2)^2$, et comme les $(mc^2)^2$ s'annulent, il obtient $p = E_k/c$ — le résultat ultra-relativiste ! — sans réaliser qu'il manque le terme dominant dans le régime non relativiste.
+
+**(e)** Limite non relativiste ($E_k \ll mc^2$) :
+
+$$E_k + 2mc^2 \approx 2mc^2$$
+
+$$p \approx \frac{1}{c}\sqrt{E_k \cdot 2mc^2} = \frac{1}{c}\sqrt{2mE_k \cdot c^2} = \sqrt{2mE_k}$$
+
+C'est la relation classique $E_k = \frac{p^2}{2m}$. ✓
+
+Limite ultra-relativiste ($E_k \gg mc^2$) :
+
+$$E_k + 2mc^2 \approx E_k$$
+
+$$p \approx \frac{1}{c}\sqrt{E_k \cdot E_k} = \frac{E_k}{c}$$
+
+On retrouve la relation d'un photon $E = pc$, ce qui est cohérent : à très haute énergie, la masse est négligeable. ✓
+
+</details>
+
+### Partie D — Désintégration à deux corps : formule générale
+
+Une particule de masse $M$, **au repos**, se désintègre en deux particules de masses $m_1$ et $m_2$ (avec $M > m_1 + m_2$).
+
+**(f)** Écrivez les deux équations de conservation (énergie et impulsion).
+
+**(g)** En utilisant le fait que $|\vec{p}_1| = |\vec{p}_2| = p$ (conséquence de la conservation de l'impulsion), et la relation $E_i^2 = (pc)^2 + (m_i c^2)^2$ pour chaque particule, montrez que :
+
+$$E_1^2 - E_2^2 = (m_1^2 - m_2^2)\,c^4$$
+
+puis, en combinant avec $E_1 + E_2 = Mc^2$, déduisez :
+
+$$\boxed{E_1 = \frac{(M^2 + m_1^2 - m_2^2)\,c^2}{2M}}$$
+
+<details>
+<summary><strong>Indice</strong></summary>
+
+Vous avez deux expressions : $E_1^2 - E_2^2 = (m_1^2 - m_2^2)c^4$ et $E_1 + E_2 = Mc^2$. La première peut se factoriser en $(E_1 - E_2)(E_1 + E_2)$. Divisez pour trouver $E_1 - E_2$, puis résolvez le système.
+
+</details>
+<details>
+<summary><strong>Solution partie D</strong></summary>
+
+**(f)** Conservation de l'énergie :
+
+$$Mc^2 = E_1 + E_2 \quad (1)$$
+
+Conservation de l'impulsion (particule $M$ au repos → $\vec{p}_{\text{total}} = 0$) :
+
+$$\vec{p}_1 + \vec{p}_2 = 0 \implies |\vec{p}_1| = |\vec{p}_2| = p$$
+
+**(g)** Pour chaque particule :
+
+$$E_1^2 = (pc)^2 + (m_1 c^2)^2 \qquad E_2^2 = (pc)^2 + (m_2 c^2)^2$$
+
+Soustraction :
+
+$$E_1^2 - E_2^2 = (m_1^2 - m_2^2)\,c^4 \quad (2)$$
+
+Factorisation du membre de gauche :
+
+$$(E_1 - E_2)(E_1 + E_2) = (m_1^2 - m_2^2)\,c^4$$
+
+En utilisant (1) :
+
+$$E_1 - E_2 = \frac{(m_1^2 - m_2^2)\,c^4}{Mc^2} = \frac{(m_1^2 - m_2^2)\,c^2}{M} \quad (3)$$
+
+Addition de (1) et (3) :
+
+$$2E_1 = Mc^2 + \frac{(m_1^2 - m_2^2)\,c^2}{M} = \frac{M^2 c^2 + (m_1^2 - m_2^2)\,c^2}{M}$$
+
+$$\boxed{E_1 = \frac{(M^2 + m_1^2 - m_2^2)\,c^2}{2M}}$$
+
+(et par symétrie $1 \leftrightarrow 2$ : $E_2 = \frac{(M^2 + m_2^2 - m_1^2)\,c^2}{2M}$)
+
+> **Piège courant :** L'astuce clé est la **soustraction** $E_1^2 - E_2^2$ qui élimine $(pc)^2$. Un étudiant qui ne voit pas cette astuce essaie de résoudre un système de deux équations avec des carrés et des racines carrées — c'est algébriquement infernal et mène presque toujours à des erreurs. La factorisation en produit $(E_1 - E_2)(E_1 + E_2)$ est la « serrure » de tout le problème.
+
+</details>
+
+### Partie E — Vérifications et cas particuliers
+
+**(h)** Vérifiez la formule de la partie D dans les cas particuliers suivants :
+
+- **Désintégration symétrique** ($m_1 = m_2 = m$) : montrez que $E_1 = E_2 = \frac{Mc^2}{2}$.
+- **Un produit sans masse** ($m_2 = 0$, par exemple un photon) : montrez que $E_1 = \frac{(M^2 + m_1^2)\,c^2}{2M}$ et $E_\gamma = \frac{(M^2 - m_1^2)\,c^2}{2M}$.
+**(i)** Pour le cas $m_2 = 0$, utilisez la formule pour calculer l'impulsion $p$ des deux produits et vérifiez que $E_\gamma = pc$ (comme il se doit pour un photon).
+
+<details>
+<summary><strong>Solution partie E</strong></summary>
+
+**(h)** Cas symétrique ($m_1 = m_2$) :
+
+$$E_1 = \frac{(M^2 + m^2 - m^2)\,c^2}{2M} = \frac{M^2 c^2}{2M} = \frac{Mc^2}{2}$$
+
+Les deux particules se partagent l'énergie également. ✓ (C'est exactement le résultat du $\pi^0 \to \gamma\gamma$ de l'exercice 3 avec $m_1 = m_2 = 0$.)
+
+Cas $m_2 = 0$ :
+
+$$E_1 = \frac{(M^2 + m_1^2)\,c^2}{2M} \qquad E_\gamma = \frac{(M^2 - m_1^2)\,c^2}{2M}$$
+
+Vérification : $E_1 + E_\gamma = \frac{(M^2 + m_1^2 + M^2 - m_1^2)\,c^2}{2M} = \frac{2M^2 c^2}{2M} = Mc^2$ ✓
+
+**(i)** L'impulsion commune $p$ se trouve via $E_\gamma = pc$ (photon sans masse) :
+
+$$pc = E_\gamma = \frac{(M^2 - m_1^2)\,c^2}{2M}$$
+
+Vérifions avec la particule 1 :
+
+$$E_1^2 - (pc)^2 = E_1^2 - E_\gamma^2 = (E_1 - E_\gamma)(E_1 + E_\gamma)$$
+
+$$= \frac{2m_1^2\,c^2}{2M} \cdot Mc^2 = m_1^2\,c^4$$
+
+Donc $E_1^2 - (pc)^2 = (m_1 c^2)^2$, ce qui est bien la relation énergie-impulsion pour une particule de masse $m_1$. ✓
+
+> **Piège courant :** En (i), les étudiants vérifient souvent $E_\gamma = pc$ en recalculant $p$ à partir de la particule 1 via $p = \frac{1}{c}\sqrt{E_1^2 - (m_1 c^2)^2}$, ce qui est correct mais demande de développer $(M^2 + m_1^2)^2 - (2Mm_1)^2$. On reconnaît une **différence de carrés** : $(M^2 + m_1^2 - 2Mm_1)(M^2 + m_1^2 + 2Mm_1) = (M - m_1)^2(M + m_1)^2$. L'étudiant qui ne voit pas cette factorisation se perd dans un développement de 4+ termes.
 
 </details>
