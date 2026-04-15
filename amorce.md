@@ -24,3 +24,28 @@ Dans tout ce document :
 - $E_n$ = énergie du niveau $n$ de l'hydrogène
 - $\Psi(x)$ = fonction d'onde
 - $\hat{A}$ = opérateur associé à l'observable $A$
+
+
+## Le rituel universel (3 gestes, toujours les mêmes)
+
+### Geste 1 — Inventaire
+
+Prends 15 secondes. Écris deux colonnes sur ta feuille :
+
+| DONNÉ | CHERCHÉ |
+| ----- | ------- |
+| ...   | ...     |
+
+Écris **tout** ce qui est donné, **avec les unités et les signes**. Tu ne réfléchis pas encore. Tu recopies. Si une vitesse va vers la gauche, mets le signe négatif tout de suite. Si c'est une longueur « mesurée par un observateur fixe », note-le. **C'est la mise en scène du problème.**
+
+> Pourquoi ça marche : 80 % du temps, l'amorce devient évidente une fois l'inventaire posé. Tu vois ce que tu as, tu vois ce qu'il te manque, et une seule équation fait le pont.
+
+### Geste 2 — Le pont
+
+Regarde la colonne CHERCHÉ. Regarde ta feuille de formules. Cherche l'équation qui **contient la quantité cherchée** et dont **toutes les autres variables sont dans la colonne DONNÉ** (ou calculables facilement à partir du donné). C'est ton équation de pont.
+
+> Si tu trouves pas de pont direct : c'est qu'il y a une **quantité intermédiaire** à calculer d'abord. Ajoute-la dans la colonne CHERCHÉ, en première position, et recommence le Geste 2 avec elle.
+
+### Geste 3 — Isoler avant de calculer
+
+Avant de toucher ta calculatrice : **isole algébriquement la variable cherchée**. Tu ne substitues les chiffres qu'à la toute fin. Ça t'évite les erreurs de frappe et ça te permet de vérifier les unités.
